@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1070805957543",
+    "project_id": "league-champions-1aa73",
+    "storage_bucket": "league-champions-1aa73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070805957543:android:752f00c54e894ad7cd9482",
+        "android_client_info": {
+          "package_name": "com.example.f21assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070805957543-s25a5rpk87hfmks4jrhosf73ens1p9rc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVcve2z9OEbt8OceFud3vLmQJrTL7YgMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070805957543-s25a5rpk87hfmks4jrhosf73ens1p9rc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
