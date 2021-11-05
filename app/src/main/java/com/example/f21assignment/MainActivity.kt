@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.f21assignment.databinding.ActivityMainBinding
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -25,8 +26,27 @@ class MainActivity : AppCompatActivity() {
                 binding.championAbilityThreeEditText.text.toString().isNotEmpty() &&
                 binding.championAbilityFourEditText.text.toString().isNotEmpty()) {
 
-            //add information to the database
+                // create an instance of the champion
+                val champ = Champion()
 
+                // we need to pull the information out of the activity and insert it into the class (Champion Class)
+                champ.name = binding.championNameEditText.text.toString()
+                champ.passive = binding.championPassiveAbilityEditText.text.toString()
+                champ.abilityOne = binding.championAbilityOneEditText.text.toString()
+                champ.abilityTwo = binding.championAbilityTwoEditText.text.toString()
+                champ.abilityThree = binding.championAbilityThreeEditText.text.toString()
+                champ.abilityFour = binding.championAbilityFourEditText.text.toString()
+
+                //add information to the database
+
+                // Connecting to the database (the collection)
+                val db = FirebaseFirestore.getInstance().collection("champions")
+
+                //1. get an ID from FireStore and setting it to the object/class
+                champ.id = db.document().id
+
+                //2. store the champ as a document (!! = this is saying that it wont be null (because we just got it on the line above))
+                db.document(champ.id!!).set(champ).
 
                 // if the data when through
                 // clear the fields
