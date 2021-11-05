@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_margin_textField">24dp</dimen>
+    <dimen name="standard_margin_textView">36dp</dimen>
+    <dimen name="standard_margin_indent">28dp</dimen>
+    <dimen name="standard_margin">10dp</dimen>
+    <dimen name="standard_textView_width">210dp</dimen>
+    <dimen name="standard_textView_height">20dp</dimen>
+    <dimen name="standard_margin_big">20dp</dimen>
+    <dimen name="standard_textSize">13dp</dimen>
+    <dimen name="standard_editText_width">250dp</dimen>
+    <dimen name="standard_editText_height">40dp</dimen>
+    <dimen name="standard_textSize_small">10dp</dimen>
+</resources>

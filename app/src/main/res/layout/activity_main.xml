@@ -6,13 +6,176 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
+        android:id="@+id/championNameTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Champion Name"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/championNameEditText"
+        android:layout_width="@dimen/standard_editText_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter Name"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championNameTextView" />
+
+    <TextView
+        android:id="@+id/championPassiveAbilityTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:text="Passive Ability"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championNameEditText" />
+
+    <EditText
+        android:id="@+id/championPassiveAbilityEditText"
+        android:layout_width="@dimen/standard_editText_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter Passive"
+        android:textSize="@dimen/standard_textSize_small"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championPassiveAbilityTextView" />
+
+    <TextView
+        android:id="@+id/championAbilityOneTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:text="Q Ability"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championPassiveAbilityEditText" />
+
+
+    <EditText
+        android:id="@+id/championAbilityOneEditText"
+        android:layout_width="@dimen/standard_editText_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter Q"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityOneTextView" />
+
+    <TextView
+        android:id="@+id/championAbilityTwoTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:text="W Ability"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityOneEditText" />
+
+
+    <EditText
+        android:id="@+id/championAbilityTwoEditText"
+        android:layout_width="@dimen/standard_editText_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter W"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityTwoTextView" />
+
+    <TextView
+        android:id="@+id/championAbilityThreeTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:text="E Ability"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityTwoEditText" />
+
+
+    <EditText
+        android:id="@+id/championAbilityThreeEditText"
+        android:layout_width="@dimen/standard_editText_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter E"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityThreeTextView" />
+
+    <TextView
+        android:id="@+id/championAbilityFourTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:text="R Ability"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityThreeEditText" />
+
+
+    <EditText
+        android:id="@+id/championAbilityFourEditText"
+        android:layout_width="@dimen/standard_editText_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter R"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityFourTextView" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addChampionFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:clickable="true"
+        android:layout_margin="@dimen/standard_margin"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/add_champion_icon" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
