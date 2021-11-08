@@ -2,6 +2,7 @@ package com.example.f21assignment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.f21assignment.databinding.ActivityMainBinding
 import com.google.firebase.firestore.FirebaseFirestore
@@ -46,7 +47,25 @@ class MainActivity : AppCompatActivity() {
                 champ.id = db.document().id
 
                 //2. store the champ as a document (!! = this is saying that it wont be null (because we just got it on the line above))
-                db.document(champ.id!!).set(champ).
+                db.document(champ.id!!).set(champ)
+                        // when the document is successful
+                        .addOnSuccessListener{
+                            Toast.makeText(this, "Champion Add", Toast.LENGTH_LONG).show()
+
+                            // Resetting the interface
+                            // clearing the fields so the users can add more data
+                            binding.championNameEditText.setText("")
+                            binding.championPassiveAbilityEditText.setText("")
+                            binding.championAbilityOneEditText.setText("")
+                            binding.championAbilityTwoEditText.setText("")
+                            binding.championAbilityThreeEditText.setText("")
+                            binding.championAbilityFourEditText.setText("")
+                        }
+                        .addOnFailureListener{
+                            Toast.makeText(this, "FAILURE, Champion NOT Add (DB Error)", Toast.LENGTH_LONG).show()
+                            //Logging the exception into logcat under the tag "DB Message"
+                            Log.i("DB Message", it.localizedMessage)
+                        }
 
                 // if the data when through
                 // clear the fields
