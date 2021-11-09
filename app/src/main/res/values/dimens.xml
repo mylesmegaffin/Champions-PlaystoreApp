@@ -12,4 +12,5 @@
     <dimen name="standard_editText_height">40dp</dimen>
     <dimen name="standard_textSize_small">10dp</dimen>
     <dimen name="standard_heading">30dp</dimen>
+    <dimen name="regular_font_size">20sp</dimen>
 </resources>
