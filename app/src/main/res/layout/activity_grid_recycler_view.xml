@@ -12,18 +12,18 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textSize="@dimen/standard_heading"
+        android:layout_margin="@dimen/standard_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/verticalRecyclerView"
+        android:id="@+id/gridRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView"
         android:layout_margin="@dimen/standard_margin"
-        app:spanCount="1"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

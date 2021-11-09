@@ -64,7 +64,10 @@ class MainActivity : AppCompatActivity() {
                         .addOnFailureListener{
                             Toast.makeText(this, "FAILURE, Champion NOT Add (DB Error)", Toast.LENGTH_LONG).show()
                             //Logging the exception into logcat under the tag "DB Message"
-                            Log.i("DB Message", it.localizedMessage)
+                            var message = it.localizedMessage
+                            message?.let {
+                                Log.i("DB Message", message)
+                            }
                         }
 
                 // if the data when through

@@ -17,7 +17,7 @@ class RecyclerListActivity : AppCompatActivity() {
         viewModel.getChampions().observe(this, { champions ->
             // creating an adapter with(context, list of champions)
             var recyclerViewAdapter = RecyclerViewAdapter(this, champions)
-            binding.verticalRecyclerView.adapter = recyclerViewAdapter
+            binding.gridRecyclerView.adapter = recyclerViewAdapter
         })
     }
 }
