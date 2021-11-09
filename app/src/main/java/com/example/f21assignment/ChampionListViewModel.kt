@@ -28,8 +28,8 @@ class ChampionListViewModel : ViewModel(){
         val db = FirebaseFirestore.getInstance().collection("champions")
             //ordering by name and ascending
             .orderBy("name", Query.Direction.ASCENDING)
-
-
+        
+        //creates continuous listener on Firestore changes
         db.addSnapshotListener { documents , exception ->
             //if there is an exception
             exception?.let {
