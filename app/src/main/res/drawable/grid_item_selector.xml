@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    The order of these matter -->
+<!--    when clicked it will show this-->
+    <item android:drawable="@drawable/background_selected" android:state_pressed="true"></item>
+<!--   it will always show this when its not clicked  -->
+    <item android:drawable="@drawable/background"></item>
+</selector>
