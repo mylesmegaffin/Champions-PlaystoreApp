@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/titleChampionNameTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Champion Name"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/championNameTextView"
+        android:layout_width="@dimen/big_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        tools:text="Name"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleChampionNameTextView" />
+
+    <TextView
+        android:id="@+id/titleChampionPassiveAbilityTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:text="Passive Ability"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championNameTextView" />
+
+    <TextView
+        android:id="@+id/championPassiveAbilityTextView"
+        android:layout_width="@dimen/big_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        tools:text="Passive"
+        android:textSize="@dimen/standard_textSize_small"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleChampionPassiveAbilityTextView" />
+
+    <TextView
+        android:id="@+id/titleChampionAbilityOneTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:text="Q Ability"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championPassiveAbilityTextView" />
+
+
+    <TextView
+        android:id="@+id/championAbilityOneTextView"
+        android:layout_width="@dimen/big_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        tools:text="Q"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleChampionAbilityOneTextView" />
+
+    <TextView
+        android:id="@+id/titleChampionAbilityTwoTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:text="W Ability"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityOneTextView" />
+
+
+    <TextView
+        android:id="@+id/championAbilityTwoTextView"
+        android:layout_width="@dimen/big_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        tools:text="W"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleChampionAbilityTwoTextView" />
+
+    <TextView
+        android:id="@+id/titleChampionAbilityThreeTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:text="E Ability"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityTwoTextView" />
+
+
+    <TextView
+        android:id="@+id/championAbilityThreeTextView"
+        android:layout_width="@dimen/big_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        tools:text="E"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleChampionAbilityThreeTextView" />
+
+    <TextView
+        android:id="@+id/titleChampionAbilityFourTextView"
+        android:layout_width="@dimen/standard_textView_width"
+        android:layout_height="@dimen/standard_textView_height"
+        android:layout_marginTop="@dimen/standard_margin_big"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:text="R Ability"
+        android:textSize="@dimen/standard_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/championAbilityThreeTextView" />
+
+
+    <TextView
+        android:id="@+id/championAbilityFourTextView"
+        android:layout_width="@dimen/big_width"
+        android:layout_height="@dimen/standard_editText_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:ems="10"
+        tools:text="R"
+        android:textAlignment="center"
+        android:textSize="@dimen/standard_textSize_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleChampionAbilityFourTextView" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="@dimen/standard_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back_button_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
