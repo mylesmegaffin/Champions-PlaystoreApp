@@ -14,8 +14,6 @@ class ChampionAbilitiesActivity : AppCompatActivity() {
 
 
 
-
-
         //when the button is clicked
         binding.backFAB.setOnClickListener{
             // start new activity and send the user there
