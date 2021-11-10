@@ -175,7 +175,7 @@
         android:layout_margin="@dimen/standard_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/add_champion_icon" />
+        app:srcCompat="@drawable/add_icon" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/backFAB"

@@ -81,7 +81,16 @@ class MainActivity : AppCompatActivity() {
 
         // when we want to go back to the list
         binding.backFAB.setOnClickListener {
-            startActivity(Intent(this, GridViewAdapter::class.java))
+            // Resetting the interface
+            // clearing the fields so the users can add more data
+            binding.championNameEditText.setText("")
+            binding.championPassiveAbilityEditText.setText("")
+            binding.championAbilityOneEditText.setText("")
+            binding.championAbilityTwoEditText.setText("")
+            binding.championAbilityThreeEditText.setText("")
+            binding.championAbilityFourEditText.setText("")
+            // Going back to the list(recycler)
+            startActivity(Intent(this, GridRecyclerViewActivity::class.java))
         }
     }
 }
