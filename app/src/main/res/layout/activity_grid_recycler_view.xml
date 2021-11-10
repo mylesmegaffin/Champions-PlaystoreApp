@@ -26,4 +26,14 @@
         app:layout_constraintTop_toBottomOf="@id/textView"
         android:layout_margin="@dimen/standard_margin"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addChampionFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/add_champion_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/standard_margin"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

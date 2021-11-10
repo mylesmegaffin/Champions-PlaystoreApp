@@ -22,6 +22,11 @@ class GridRecyclerViewActivity : AppCompatActivity(), GridViewAdapter.ChampionIt
             var gridViewAdapter = GridViewAdapter(this, champions, this)
             binding.gridRecyclerView.adapter = gridViewAdapter
         })
+
+        //when the fab is clicked we want to navigate to the add champion view
+        binding.addChampionFAB.setOnClickListener{
+            startActivity(Intent(this, MainActivity::class.java));
+        }
     }
 
     /**
@@ -42,4 +47,5 @@ class GridRecyclerViewActivity : AppCompatActivity(), GridViewAdapter.ChampionIt
         // Which the activity
         startActivity(intent)
     }
+
 }

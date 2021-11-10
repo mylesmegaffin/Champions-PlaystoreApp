@@ -1,5 +1,6 @@
 package com.example.f21assignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,8 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        Toast.makeText(this, "Champion has been added", Toast.LENGTH_LONG).show()
 
         // when the button is clicked
         binding.addChampionFAB.setOnClickListener {
@@ -78,6 +77,11 @@ class MainActivity : AppCompatActivity() {
                 // make a toast to tell them what happened
                 Toast.makeText(this, "All the Fields are Required", Toast.LENGTH_LONG).show()
             }
+        }
+
+        // when we want to go back to the list
+        binding.backFAB.setOnClickListener {
+            startActivity(Intent(this, GridViewAdapter::class.java))
         }
     }
 }
