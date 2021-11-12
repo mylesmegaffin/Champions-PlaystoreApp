@@ -9,14 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.F21Assignment">
-        <activity android:name=".ChampionAbilitiesActivity"></activity>
-        <activity android:name=".GridRecyclerViewActivity">
+        <activity android:name=".SignInActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ChampionAbilitiesActivity" />
+        <activity android:name=".GridRecyclerViewActivity"></activity>
         <activity android:name=".RecyclerListActivity" />
         <activity android:name=".MainActivity" />
     </application>
