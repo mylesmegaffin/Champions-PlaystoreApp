@@ -29,13 +29,24 @@
         android:layout_margin="@dimen/standard_margin"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addChampionFAB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:srcCompat="@drawable/add_champion_icon"
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/addChampionFAB"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        app:srcCompat="@drawable/add_champion_icon"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_margin="@dimen/standard_margin"/>-->
+
+<!--    putting this down here so we can use it. we couldn't use it before because it layers from top to bottom-->
+    <include
+        android:id="@+id/mainToolBar"
+        layout="@layout/toolbar_main"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="@dimen/standard_margin"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
