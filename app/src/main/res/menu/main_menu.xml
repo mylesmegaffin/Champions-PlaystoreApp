@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/addChampion"
+        android:icon="@drawable/add_champion_icon"
+        android:title="@string/add_champion"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/championList"
+        android:icon="@drawable/list_icon"
+        android:title="@string/list_of_champions"
+        app:showAsAction="ifRoom"/>
+</menu>
