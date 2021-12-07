@@ -161,15 +161,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleChampionAbilityFourTextView" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/backFAB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:layout_margin="@dimen/standard_margin"
-        app:layout_constraintBottom_toBottomOf="parent"
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/backFAB"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:layout_margin="@dimen/standard_margin"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/back_button_icon" />-->
+
+    <include
+        android:id="@+id/mainToolBar"
+        layout="@layout/toolbar_main"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/back_button_icon" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,8 @@ package com.GC200431861M.f21assignment
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import com.GC200431861M.f21assignment.databinding.ActivityChampionAbilitiesBinding
 
 class ChampionAbilitiesActivity : AppCompatActivity() {
@@ -22,11 +24,36 @@ class ChampionAbilitiesActivity : AppCompatActivity() {
         binding.championAbilityThreeTextView.text = intent.getStringExtra("abilityThree")
         binding.championAbilityFourTextView.text = intent.getStringExtra("abilityFour")
 
-        //when the button is clicked
-        binding.backFAB.setOnClickListener{
-            // start new activity and send the user there
-            startActivity(Intent(this, GridRecyclerViewActivity::class.java))
-        }
+//        //when the button is clicked
+//        binding.backFAB.setOnClickListener{
+//            // start new activity and send the user there
+//            startActivity(Intent(this, GridRecyclerViewActivity::class.java))
+//        }
 
+
+        setSupportActionBar(binding.mainToolBar.toolbar)
+    }
+
+    /**
+     * Add the menu to the toolbar
+     */
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // when is like switch
+        when(item.itemId){
+            R.id.addChampion -> {
+                startActivity(Intent(applicationContext, MainActivity::class.java))
+                return true
+            }
+            R.id.championList -> {
+                startActivity(Intent(applicationContext, GridRecyclerViewActivity::class.java))
+                return true
+            }
+        }
+        return  super.onOptionsItemSelected(item)
     }
 }
