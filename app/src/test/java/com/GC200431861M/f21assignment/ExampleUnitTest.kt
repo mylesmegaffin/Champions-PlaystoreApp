@@ -1,4 +1,4 @@
-package com.example.f21assignment
+package com.GC200431861M.f21assignment
 
 import org.junit.Test
 

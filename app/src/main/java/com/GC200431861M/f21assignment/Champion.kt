@@ -1,4 +1,4 @@
-package com.example.f21assignment
+package com.GC200431861M.f21assignment
 
 class Champion (var id: String?=null,
                 var name: String?=null,

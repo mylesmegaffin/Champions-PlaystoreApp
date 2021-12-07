@@ -1,11 +1,10 @@
-package com.example.f21assignment
+package com.GC200431861M.f21assignment
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.example.f21assignment.databinding.ActivityGridRecyclerViewBinding
-import com.example.f21assignment.databinding.ActivityRecyclerListBinding
+import com.GC200431861M.f21assignment.databinding.ActivityGridRecyclerViewBinding
 
 class GridRecyclerViewActivity : AppCompatActivity(), GridViewAdapter.ChampionItemListener {
     private lateinit var binding : ActivityGridRecyclerViewBinding

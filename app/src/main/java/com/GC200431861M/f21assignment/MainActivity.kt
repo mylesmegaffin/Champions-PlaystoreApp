@@ -1,11 +1,11 @@
-package com.example.f21assignment
+package com.GC200431861M.f21assignment
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.f21assignment.databinding.ActivityMainBinding
+import com.GC200431861M.f21assignment.databinding.ActivityMainBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {

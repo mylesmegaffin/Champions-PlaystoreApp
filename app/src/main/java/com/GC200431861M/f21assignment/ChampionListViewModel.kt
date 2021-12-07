@@ -1,4 +1,4 @@
-package com.example.f21assignment
+package com.GC200431861M.f21assignment
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import com.google.firebase.ktx.Firebase
 
 // : means extends
 class ChampionListViewModel : ViewModel(){

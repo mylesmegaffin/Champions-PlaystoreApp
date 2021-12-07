@@ -1,9 +1,9 @@
-package com.example.f21assignment
+package com.GC200431861M.f21assignment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.example.f21assignment.databinding.ActivityRecyclerListBinding
+import com.GC200431861M.f21assignment.databinding.ActivityRecyclerListBinding
 
 class RecyclerListActivity : AppCompatActivity() {
     private lateinit var binding : ActivityRecyclerListBinding

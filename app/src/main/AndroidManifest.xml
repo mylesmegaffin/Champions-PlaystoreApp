@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.f21assignment">
+    package="com.GC200431861M.f21assignment">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.F21Assignment">
-        <activity android:name=".SignInActivity"
+        <activity android:name="com.GC200431861M.f21assignment.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChampionAbilitiesActivity" />
-        <activity android:name=".GridRecyclerViewActivity"></activity>
-        <activity android:name=".RecyclerListActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.GC200431861M.f21assignment.ChampionAbilitiesActivity" />
+        <activity android:name="com.GC200431861M.f21assignment.GridRecyclerViewActivity"></activity>
+        <activity android:name="com.GC200431861M.f21assignment.RecyclerListActivity" />
+        <activity android:name="com.GC200431861M.f21assignment.MainActivity" />
     </application>
 
 </manifest>

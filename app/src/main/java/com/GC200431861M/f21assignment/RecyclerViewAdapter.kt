@@ -1,4 +1,4 @@
-package com.example.f21assignment
+package com.GC200431861M.f21assignment
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class GridViewAdapter (val context : Context, val champions : List<Champion>, val itemListener: ChampionItemListener) : RecyclerView.Adapter<GridViewAdapter.ChampionViewHolder>(){
+class RecyclerViewAdapter (val context : Context, val champions : List<Champion>) : RecyclerView.Adapter<RecyclerViewAdapter.ChampionViewHolder>(){
 
     /**
      * This class is used to allow us to access the item_champion.xml objects
@@ -21,7 +21,7 @@ class GridViewAdapter (val context : Context, val champions : List<Champion>, va
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChampionViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_grid_champion, parent, false)
+        val view = inflater.inflate(R.layout.item_champion, parent, false)
         return ChampionViewHolder(view)
     }
 
@@ -32,23 +32,12 @@ class GridViewAdapter (val context : Context, val champions : List<Champion>, va
         val champion = champions[position]
         with (holder) {
             nameTextView.text = champion.name
-            
-            //if someone clicks the item
-            itemView.setOnClickListener{
-                //call the method and pass in that champion
-                itemListener.championSelected(champion)
-            }
         }
     }
 
     override fun getItemCount(): Int {
         return champions.size
     }
-
-    interface ChampionItemListener {
-        fun championSelected(champion : Champion)
-    }
-
 
 
 
