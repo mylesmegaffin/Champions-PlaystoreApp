@@ -7,15 +7,23 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
 import com.GC200431861M.f21assignment.databinding.ActivityGridRecyclerViewBinding
+import com.google.firebase.auth.FirebaseAuth
 
 
 class GridRecyclerViewActivity : AppCompatActivity(), GridViewAdapter.ChampionItemListener {
     private lateinit var binding : ActivityGridRecyclerViewBinding
+    private val authDB = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGridRecyclerViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //ensure we have an authenticated user
+        if(authDB.currentUser == null){
+            //if the users is not authenticated make log out user
+            logout()
+        }
 
         //get the data from the view model
         val viewModel : ChampionListViewModel by viewModels()
@@ -53,6 +61,14 @@ class GridRecyclerViewActivity : AppCompatActivity(), GridViewAdapter.ChampionIt
         return  super.onOptionsItemSelected(item)
     }
 
+    /**
+     * Logout the user and send them to the sign in activity to sign in
+     */
+    private fun logout() {
+        authDB.signOut()
+        finish()
+        startActivity(Intent(this, SignInActivity::class.java))
+    }
 
     /**
      * When a champion is selected, pass the Champion information to the ChampionAbilitiesActivity

@@ -4,17 +4,27 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.GC200431861M.f21assignment.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
+    private val authDB = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //ensure we have an authenticated user
+        if(authDB.currentUser == null){
+            //if the users is not authenticated make log out user
+            logout()
+        }
 
         // when the button is clicked
         binding.addChampionFAB.setOnClickListener {
@@ -79,18 +89,53 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // when we want to go back to the list
-        binding.backFAB.setOnClickListener {
-            // Resetting the interface
-            // clearing the fields so the users can add more data
-            binding.championNameEditText.setText("")
-            binding.championPassiveAbilityEditText.setText("")
-            binding.championAbilityOneEditText.setText("")
-            binding.championAbilityTwoEditText.setText("")
-            binding.championAbilityThreeEditText.setText("")
-            binding.championAbilityFourEditText.setText("")
-            // Going back to the list(recycler)
-            startActivity(Intent(this, GridRecyclerViewActivity::class.java))
+//        // when we want to go back to the list
+//        binding.backFAB.setOnClickListener {
+//            // Resetting the interface
+//            // clearing the fields so the users can add more data
+//            binding.championNameEditText.setText("")
+//            binding.championPassiveAbilityEditText.setText("")
+//            binding.championAbilityOneEditText.setText("")
+//            binding.championAbilityTwoEditText.setText("")
+//            binding.championAbilityThreeEditText.setText("")
+//            binding.championAbilityFourEditText.setText("")
+//            // Going back to the list(recycler)
+//            startActivity(Intent(this, GridRecyclerViewActivity::class.java))
+//        }
+
+        setSupportActionBar(binding.mainToolBar.toolbar)
+    }
+
+    /**
+     * Add the menu to the toolbar
+     */
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // when is like switch
+        when(item.itemId){
+            R.id.addChampion -> {
+                //DISABLED!: we don't want to load the page again
+                //startActivity(Intent(applicationContext, MainActivity::class.java))
+                return true
+            }
+            R.id.championList -> {
+                startActivity(Intent(applicationContext, GridRecyclerViewActivity::class.java))
+                return true
+            }
         }
+        return  super.onOptionsItemSelected(item)
+    }
+
+    /**
+     * Logout the user and send them to the sign in activity to sign in
+     */
+    private fun logout() {
+        authDB.signOut()
+        finish()
+        startActivity(Intent(this, SignInActivity::class.java))
     }
 }
