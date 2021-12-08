@@ -1,12 +1,12 @@
 Myles Megaffin - 200431861
 
 Upgrades since Assignment 2:
-	- Launcher Icon has been replaced
-	- Added Deployment Assets into the Project
-	- Updated and Stream lined the Navigation around the App
-	- Fixed FAB's
-	- Added Styling to the App that fits with the overall theme
-	- Added Required Auth on some Pages
+	• Launcher Icon has been replaced
+	• Added Deployment Assets into the Project
+	• Updated and Stream lined the Navigation around the App
+	• Fixed FAB's
+	• Added Styling to the App that fits with the overall theme
+	• Added Required Auth on some Pages
 
 
 Purpose of application:
