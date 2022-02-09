@@ -1,4 +1,4 @@
-Myles Megaffin - 200431861
+Myles Megaffin
 
 Some features implemented
 	• Launcher Icon has been replaced
